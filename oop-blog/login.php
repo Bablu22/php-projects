@@ -1,13 +1,11 @@
 <?php
 @include("header.php");
 @include("account.php");
-@include("session.php");
 @include("db.php");
 $user = new Account($db);
 if (isset($_POST['user_login'])) {
     $user->login($_POST['username'], md5($_POST['password']));
 }
-
 ?>
 
 <div class="container mx-auto">
